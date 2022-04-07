@@ -9,11 +9,11 @@ function approve() {
     var content = "<p><br><br>Approving transaction...<br></p>";
     content += zombieMaster;
     $("#lang").html(content);
-    var event = contractZombie.methods.approve("0xc48A5414F012318a227BbBd2AB00b0751c621676", amount3).send({ from: zombieMaster, gas: 65000, gasPrice: 1047000000 })
+    var event = contractZombie.methods.approve("0xb557a246569556dCF0a897AfA91d57d9c549cA36", amount3).send({ from: zombieMaster, gas: 65000, gasPrice: 1047000000 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "<p><br><br>Approved!<br></p>";
-            alert("Done. The horde is ready!")
+            alert("Done. The bank is ready!")
     content += JSON.stringify(receipt.transactionHash);
     $("#lang").html(content);
         });;
